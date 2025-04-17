@@ -52,6 +52,7 @@ export default {
       label: 'Tutorial',
       items: ['tutorial-basics/create-a-document'],
     },
+    
   ],
 };
 ```
