@@ -26,9 +26,9 @@ You must ensure your integration token is authorized with the correct scope.
 
 ```http
 GET https://integration-service.europe-west1.run.app/api/v1/shopify/products/paginated/
+```
 
-
-```curl
+```c
 curl -L \
   -X POST \
   -H "Accept: application/vnd.github+json" \
@@ -36,7 +36,9 @@ curl -L \
   -H "X-GitHub-Api-Version: 2022-11-28" \
   https://api.github.com/markdown \
   -d '{"text":"Hello **world**"}'
+```
 
+---
 
 ### 🔄 Parameters
 
