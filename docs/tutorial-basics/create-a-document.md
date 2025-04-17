@@ -1,58 +1,28 @@
 ---
-sidebar_position: 2
+id: products-api
+title: Products API
+description: Get paginated list of Shopify products
 ---
 
-# Create a Document
+# 🛍️ Products API
 
-Documents are **groups of pages** connected through:
+This endpoint allows you to retrieve a **paginated list of Shopify products**.
 
-- a **sidebar**
-- **previous/next navigation**
-- **versioning**
-
-## Create your first Doc
-
-Create a Markdown file at `docs/hello.md`:
-
-```md title="docs/hello.md"
-# Hello
-
-This is my **first Docusaurus document**!
-```
-
-A new document is now available at [http://localhost:3000/docs/hello](http://localhost:3000/docs/hello).
-
-## Configure the Sidebar
-
-Docusaurus automatically **creates a sidebar** from the `docs` folder.
-
-Add metadata to customize the sidebar label and position:
-
-```md title="docs/hello.md" {1-4}
----
-sidebar_label: 'Hi!'
-sidebar_position: 3
 ---
 
-# Hello
+## 🔐 Scopes
 
-This is my **first Docusaurus document**!
-```
+| ID  | Scope Name |
+|-----|------------|
+| 1   | Customer   |
+| 2   | Product    |
+| 3   | Order      |
 
-It is also possible to create your sidebar explicitly in `sidebars.js`:
+You must ensure your integration token is authorized with the correct scope.
 
-```js title="sidebars.js"
-export default {
-  tutorialSidebar: [
-    'intro',
-    // highlight-next-line
-    'hello',
-    {
-      type: 'category',
-      label: 'Tutorial',
-      items: ['tutorial-basics/create-a-document'],
-    },
-    
-  ],
-};
-```
+---
+
+## 📬 Endpoint
+
+```http
+GET https://integration-service.europe-west1.run.app/api/v1/shopify/products/paginated/
