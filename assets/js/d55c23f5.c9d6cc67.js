@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmarketing_integration_docs=self.webpackChunkmarketing_integration_docs||[]).push([[7800],{8021:t=>{t.exports=JSON.parse('{"metadata":{"permalink":"/marketing-integration-docs/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":4,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);
