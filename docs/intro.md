@@ -3,5 +3,5 @@ sidebar_position: 1
 ---
 
 # Intro
-This feature allows third-party services to import contact or marketing-related data directly into our marketing platform via a secure API.
-It’s designed for external apps or services—like CRMs, lead capture tools, or custom backends—that want to push data into our system for campaigns, automation, or analytics.
+This feature enables third-party services to seamlessly import contact or marketing-related data into our marketing platform through a secure, callback-based API.
+It's built for external applications—such as e-commerce platforms, or custom backends—that need to deliver data into our system for use in campaigns.
