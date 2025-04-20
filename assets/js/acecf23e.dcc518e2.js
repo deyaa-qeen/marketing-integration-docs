@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkmarketing_integration_docs=self.webpackChunkmarketing_integration_docs||[]).push([[1903],{1912:t=>{t.exports=JSON.parse('{"blogBasePath":"/marketing-integration-docs/blog","blogTitle":"Blog","authorsListPath":"/marketing-integration-docs/blog/authors"}')}}]);
