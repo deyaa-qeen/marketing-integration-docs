@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# 🔐 Auth
+# Auth
 
 To securely access or integrate with our Marketing App API, all requests must be authenticated using two required headers:
 

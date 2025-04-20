@@ -2,7 +2,7 @@
 sidebar_position: 3
 ---
 
-# 📥 Importing Data
+# Importing Data
 
 Instead of sending data directly to us, **your service must expose an API endpoint** that we will call (callback style). This allows us to pull the data when needed.
 
@@ -28,7 +28,6 @@ You must define the scope of your callback API:
 | 2   | `product`  | Product catalog data                     |
 | 3   | `order`    | Order history or transaction data        |
 
-Each scope will be handled independently, so you can provide different endpoints per scope if needed.
 
 ---
 
@@ -51,7 +50,7 @@ This is an example of the expected response when fetching data through your call
 ```json
 {
   "status": "success",
-  "message": "Fetched 50 customers",
+  "message": "",
   "meta": {
     "has_next_page": true,
     "cursor": "abc123",
@@ -76,7 +75,7 @@ This is an example of the expected response when fetching data through your call
 
 ### 🧾 Notes:
 
-- **status** and **message** are optional fields, typically used for logging or debugging.
+- **status** and **message** are optional fields.
 
 - **meta** provides important information such as whether there are more pages to fetch or the cursor for pagination:
   - **has_next_page**: A boolean indicating if more data exists.
@@ -85,3 +84,11 @@ This is an example of the expected response when fetching data through your call
   - **page_size**: The number of records per page.
 
 - **data** contains the actual records that are being fetched.
+
+  **Customer Data Requirements:**
+
+  - All fields listed in each customer record are **required**. Please **do not return any customer** that is missing one or more of the required fields.
+  - **gender**: Must be either `"Male"` or `"Female"` — the first letter **must be capitalized**.
+  - **consent**: Indicates whether the customer **agrees to receive marketing messages**. This should be a boolean (`true` or `false`).
+
+     
