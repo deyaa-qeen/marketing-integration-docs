@@ -7,7 +7,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'marketing-integration-docs',
   tagline: '',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/facon.ico',
 
   // Set the production url of your site here
   url: 'https://deyaa-qeen.github.io',
@@ -66,7 +66,7 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    image: 'img/docusaurl-card.jpg',
     navbar: {
       title: 'Marketing Integration',
       logo: {
