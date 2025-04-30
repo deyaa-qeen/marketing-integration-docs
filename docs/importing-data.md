@@ -25,8 +25,8 @@ You must define the scope of your callback API:
 | ID  | Scope Name | Description                              |
 |-----|------------|------------------------------------------|
 | 1   | `customer` | Contact or user information              |
-| 2   | `product`  | Product catalog data                     |
-| 3   | `order`    | Order history or transaction data        |
+| 2   | `order`  | Product catalog data                     |
+| 3   | `product`    | Order history or transaction data        |
 
 
 ---
@@ -41,8 +41,14 @@ We support two methods of pagination:
 Example:
 
 ```http
-GET /your-api/customers?page=1&page_size=50
+Post /your-api/customers?page=1&page_size=50
 ```
+```json
+in body:
+{
+  "shop":"domain"
+}
+
 ## 📊 Example Response Format
 
 This is an example of the expected response when fetching data through your callback API.
@@ -65,8 +71,8 @@ This is an example of the expected response when fetching data through your call
       "last_name": "Doe",
       "mobile": "+1234567890",
       "language": "en",
-      "consent": true,
-      "gender": "male",
+      "consent": "YES",
+      "gender": "Male",
       "last_modified_date": "2024-12-01T10:30:00Z"
     }
   ]
@@ -89,6 +95,6 @@ This is an example of the expected response when fetching data through your call
 
   - All fields listed in each customer record are **required**. Please **do not return any customer** that is missing one or more of the required fields.
   - **gender**: Must be either `"Male"` or `"Female"` — the first letter **must be capitalized**.
-  - **consent**: Indicates whether the customer **agrees to receive marketing messages**. This should be a boolean (`true` or `false`).
+  - **consent**: Indicates whether the customer **agrees to receive marketing messages**. This should be a string (`Yes` or `No`).
 
      
