@@ -43,12 +43,12 @@ Example:
 ```http
 Post /your-api/customers?page=1&page_size=50
 ```
-```json
 in body:
+```json
 {
   "shop":"domain"
 }
-
+```
 ## 📊 Example Response Format
 
 This is an example of the expected response when fetching data through your callback API.
